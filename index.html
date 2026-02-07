@@ -66,10 +66,11 @@
 
         <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[100] translate-x-full lg:hidden flex flex-col items-center justify-center space-y-8">
             <button onclick="toggleMenu()" class="absolute top-10 right-10 text-white text-3xl">&times;</button>
-            <a href="index.html" class="text-yellow-500 text-2xl font-black uppercase italic">Home</a>
-            <a href="about.html" class="text-white text-2xl font-black uppercase italic">About</a>
-            <a href="services.html" class="text-white text-2xl font-black uppercase italic">Services</a>
-            <a href="fleet.html" class="text-white text-2xl font-black uppercase italic">Fleet</a>
+            <a href="index.html" class="text-yellow-500 text-2xl font-black uppercase italic" onclick="toggleMenu()">Home</a>
+            <a href="about.html" class="text-white text-2xl font-black uppercase italic" onclick="toggleMenu()">About Us</a>
+            <a href="services.html" class="text-white text-2xl font-black uppercase italic" onclick="toggleMenu()">Services</a>
+            <a href="fleet.html" class="text-white text-2xl font-black uppercase italic" onclick="toggleMenu()">Fleet</a>
+            <a href="contact.html" class="text-white text-2xl font-black uppercase italic" onclick="toggleMenu()">Contact Us</a>
         </div>
     </nav>
 
@@ -82,10 +83,8 @@
         <div class="absolute inset-0 z-[3] bg-gradient-to-r from-slate-950/90 to-transparent"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl">
-                
                 <h1 class="text-6xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase italic">
-                    Moving Brands <br><span class="text-yellow-400">
-                        Making Impact.</span>
+                    Moving Brands <br><span class="text-yellow-400">Making Impact.</span>
                 </h1>
                 <a href="https://wa.me/254742755981" class="btn-yellow-hover bg-yellow-500 text-slate-900 font-black px-12 py-5 rounded-sm transition-all uppercase text-xs tracking-widest inline-flex items-center gap-3">
                     Drive Your Brand <i class="fa-solid fa-arrow-right"></i>
@@ -97,63 +96,45 @@
     <section class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black uppercase italic text-slate-900 tracking-tight">
-                    Core Solutions
-                </h2>
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic text-slate-900 tracking-tight">Core Solutions</h2>
                 <div class="h-1.5 w-24 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
-                <p class="text-slate-500 uppercase tracking-[0.3em] text-[10px] font-bold mt-4">
-                    Tailored Engagement Experiences
-                </p>
+                <p class="text-slate-500 uppercase tracking-[0.3em] text-[10px] font-bold mt-4">Tailored Engagement Experiences</p>
             </div>
     
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                
                 <div class="service-card group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-slate-900 shadow-xl transition-all duration-500 hover:shadow-yellow-500/20">
                     <img src="assets/images/truck5.jpg" class="w-full h-full object-cover opacity-70 transition-all duration-700">
                     <div class="absolute inset-0 p-8 flex flex-col justify-end text-center items-center bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
                         <div class="overlay-content w-full">
                             <h3 class="text-3xl font-black text-white uppercase italic mb-3">Roadshows</h3>
-                            <p class="text-slate-200 text-sm mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                High-energy mobile activations designed to penetrate rural and urban markets with precision.
-                            </p>
-                            <a href="services.html#unbranded" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">
-                                Explore Logistics
-                            </a>
+                            <p class="text-slate-200 text-sm mb-6 leading-relaxed md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">High-energy mobile activations designed to penetrate rural and urban markets with precision.</p>
+                            <a href="services.html#unbranded" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">Explore Logistics</a>
                         </div>
                     </div>
                 </div>
-    
+            
                 <div class="service-card group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-slate-900 shadow-xl transition-all duration-500 hover:shadow-yellow-500/20">
                     <img src="assets/images/truck8.jpeg" class="w-full h-full object-cover opacity-70 transition-all duration-700">
                     <div class="absolute inset-0 p-8 flex flex-col justify-end text-center items-center bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
                         <div class="overlay-content w-full">
                             <h3 class="text-3xl font-black text-white uppercase italic mb-3">Branding</h3>
-                            <p class="text-slate-200 text-sm mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Transforming our massive fleet into your moving billboard with premium, high-impact wrap designs.
-                            </p>
-                            <a href="services.html#branded" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">
-                                View Samples
-                            </a>
+                            <p class="text-slate-200 text-sm mb-6 leading-relaxed md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">Transforming our massive fleet into your moving billboard with premium, high-impact wrap designs.</p>
+                            <a href="services.html#branded" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">View Samples</a>
                         </div>
                     </div>
                 </div>
-    
+            
                 <div class="service-card group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-slate-900 shadow-xl transition-all duration-500 hover:shadow-yellow-500/20">
                     <img src="assets/images/sound3.jpg" class="w-full h-full object-cover opacity-70 transition-all duration-700">
                     <div class="absolute inset-0 p-8 flex flex-col justify-end text-center items-center bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
                         <div class="overlay-content w-full">
                             <h3 class="text-3xl font-black text-white uppercase italic mb-3">Sound & Crew</h3>
-                            <p class="text-slate-200 text-sm mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Professional stage setup, PA systems, and an elite crew to manage your event from start to finish.
-                            </p>
-                            <a href="services.html#equipment" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">
-                                Check Equipment
-                            </a>
+                            <p class="text-slate-200 text-sm mb-6 leading-relaxed md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">Professional stage setup, PA systems, and an elite crew to manage your event from start to finish.</p>
+                            <a href="services.html#equipment" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">Check Equipment</a>
                         </div>
                     </div>
                 </div>
             </div>
-    
             <div class="mt-16 text-center">
                 <a href="fleet.html" class="inline-flex items-center gap-3 text-xs font-black uppercase tracking-widest text-slate-900 group">
                     See the Whole Fleet
@@ -168,14 +149,27 @@
     <footer class="navy-theme text-white py-16">
         <div class="container mx-auto px-6 text-center">
             <p class="text-xl font-black uppercase tracking-widest italic mb-8">Heights Marketing Solutions</p>
-            <div class="flex justify-center items-center gap-8">
+            
+            <div class="flex justify-center items-center gap-8 mb-6">
                 <a href="https://wa.me/254742755981" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=100064035127737" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@heightsmarketing" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.tiktok.com/@otileblack_" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-tiktok"></i></a>
             </div>
-            <p class="text-slate-500 text-[10px] uppercase font-bold mt-12 tracking-widest">&copy; 2026 Heights Marketing Solutions</p>
+            
+            <p class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 mb-12">Witness the Impact</p>
+
+            <div class="mt-12 space-y-3">
+                <p class="text-slate-500 text-[10px] uppercase font-bold tracking-widest">
+                    &copy; 2026 All Rights Reserved.
+                </p>
+                <p class="text-slate-600 text-[9px] uppercase tracking-[0.2em]">
+                    Made with ❤️ by 
+                    <a href="mailto:wanjikungigi588@gmail.com" class="text-slate-400 hover:text-yellow-500 transition border-b border-slate-700 pb-0.5">Wanjiku Ngigi</a>
+                </p>
+            </div>
         </div>
     </footer>
+                
 
     <script>
         // Slideshow logic
