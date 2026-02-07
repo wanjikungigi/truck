@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heights Marketing Solutions | Moving Brands, Making Impact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Slideshow Logic */
+        .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease-in-out; z-index: 1; }
+        .slide.active { opacity: 1; z-index: 2; }
+        
+        .navy-theme { background-color: #0f172a; }
+        
+        /* Interactive Card Spice */
+        .service-card .overlay-content {
+            transform: translateY(100px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+        }
+        
+        .service-card:hover .overlay-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .service-card:hover img {
+            filter: blur(2px) brightness(0.5);
+            transform: scale(1.1);
+        }
+
+        .btn-yellow-hover:hover {
+            background-color: #eab308 !important; 
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.4);
+        }
+
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <nav class="bg-white sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col items-center gap-1 group">
+                <img src="assets/images/HEIGHTS.jpg" alt="Logo" class="h-10 w-auto transition-transform group-hover:rotate-3">
+                <div class="text-center">
+                    <span class="block text-lg font-black text-slate-900 uppercase tracking-tighter leading-none">Heights Marketing</span>
+                    <span class="text-[9px] text-yellow-600 font-bold uppercase tracking-[0.3em] block">Solutions</span>
+                </div>
+            </a>
+
+            <ul class="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                <li><a href="index.html" class="text-yellow-600 border-b-2 border-yellow-500 pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-yellow-600 transition">About Us</a></li>
+                <li><a href="services.html" class="hover:text-yellow-600 transition">Services</a></li>
+                <li><a href="fleet.html" class="hover:text-yellow-600 transition">Fleet</a></li>
+                <li><a href="contact.html" class="bg-slate-900 text-white px-6 py-3 rounded-sm hover:bg-yellow-500 hover:text-slate-900 transition">Contact us</a></li>
+            </ul>
+
+            <button class="lg:hidden text-2xl text-slate-900" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[100] translate-x-full lg:hidden flex flex-col items-center justify-center space-y-8">
+            <button onclick="toggleMenu()" class="absolute top-10 right-10 text-white text-3xl">&times;</button>
+            <a href="index.html" class="text-yellow-500 text-2xl font-black uppercase italic">Home</a>
+            <a href="about.html" class="text-white text-2xl font-black uppercase italic">About</a>
+            <a href="services.html" class="text-white text-2xl font-black uppercase italic">Services</a>
+            <a href="fleet.html" class="text-white text-2xl font-black uppercase italic">Fleet</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[85vh] flex items-center overflow-hidden navy-theme">
+        <div id="slideshow">
+            <div class="slide active"><img src="assets/images/truck7.jpeg" class="w-full h-full object-cover opacity-40"></div>
+            <div class="slide"><img src="assets/images/truck8.jpeg" class="w-full h-full object-cover opacity-40"></div>
+            <div class="slide"><img src="assets/images/truck9.jpeg" class="w-full h-full object-cover opacity-40"></div>
+        </div>
+        <div class="absolute inset-0 z-[3] bg-gradient-to-r from-slate-950/90 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                
+                <h1 class="text-6xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase italic">
+                    Moving Brands <br><span class="text-yellow-400">
+                        Making Impact.</span>
+                </h1>
+                <a href="https://wa.me/254742755981" class="btn-yellow-hover bg-yellow-500 text-slate-900 font-black px-12 py-5 rounded-sm transition-all uppercase text-xs tracking-widest inline-flex items-center gap-3">
+                    Drive Your Brand <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic text-slate-900 tracking-tight">
+                    Core Solutions
+                </h2>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-500 uppercase tracking-[0.3em] text-[10px] font-bold mt-4">
+                    Tailored Engagement Experiences
+                </p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="service-card group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-slate-900 shadow-xl transition-all duration-500 hover:shadow-yellow-500/20">
+                    <img src="assets/images/truck5.jpg" class="w-full h-full object-cover opacity-70 transition-all duration-700">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-center items-center bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
+                        <div class="overlay-content w-full">
+                            <h3 class="text-3xl font-black text-white uppercase italic mb-3">Roadshows</h3>
+                            <p class="text-slate-200 text-sm mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                High-energy mobile activations designed to penetrate rural and urban markets with precision.
+                            </p>
+                            <a href="services.html#unbranded" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">
+                                Explore Logistics
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="service-card group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-slate-900 shadow-xl transition-all duration-500 hover:shadow-yellow-500/20">
+                    <img src="assets/images/truck8.jpeg" class="w-full h-full object-cover opacity-70 transition-all duration-700">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-center items-center bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
+                        <div class="overlay-content w-full">
+                            <h3 class="text-3xl font-black text-white uppercase italic mb-3">Branding</h3>
+                            <p class="text-slate-200 text-sm mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Transforming our massive fleet into your moving billboard with premium, high-impact wrap designs.
+                            </p>
+                            <a href="services.html#branded" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">
+                                View Samples
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="service-card group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-slate-900 shadow-xl transition-all duration-500 hover:shadow-yellow-500/20">
+                    <img src="assets/images/sound3.jpg" class="w-full h-full object-cover opacity-70 transition-all duration-700">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end text-center items-center bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
+                        <div class="overlay-content w-full">
+                            <h3 class="text-3xl font-black text-white uppercase italic mb-3">Sound & Crew</h3>
+                            <p class="text-slate-200 text-sm mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Professional stage setup, PA systems, and an elite crew to manage your event from start to finish.
+                            </p>
+                            <a href="services.html#equipment" class="inline-block bg-yellow-500 text-slate-900 px-8 py-3 text-[10px] font-black uppercase tracking-widest rounded-full transition-all transform hover:scale-110">
+                                Check Equipment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mt-16 text-center">
+                <a href="fleet.html" class="inline-flex items-center gap-3 text-xs font-black uppercase tracking-widest text-slate-900 group">
+                    See the Whole Fleet
+                    <span class="bg-slate-900 text-white p-3 rounded-full group-hover:bg-yellow-500 group-hover:text-slate-900 transition-all">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="navy-theme text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xl font-black uppercase tracking-widest italic mb-8">Heights Marketing Solutions</p>
+            <div class="flex justify-center items-center gap-8">
+                <a href="https://wa.me/254742755981" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100064035127737" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@heightsmarketing" target="_blank" class="text-yellow-500 hover:scale-125 transition text-3xl"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p class="text-slate-500 text-[10px] uppercase font-bold mt-12 tracking-widest">&copy; 2026 Heights Marketing Solutions</p>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow logic
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        function playSlideshow() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(playSlideshow, 3500);
+
+        // Mobile Menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
+    </script>
+</body>
+</html>
